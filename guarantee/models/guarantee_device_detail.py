@@ -2,10 +2,10 @@ from odoo import models, fields, api
 import logging
 _logger = logging.getLogger(__name__)
 
-class GuaranteeDevice(models.Model):
-      _name = 'guarantee.genaral.detail'
+class GuaranteeDeviceDetail(models.Model):
+      _name = 'guarantee.device.detail'
       
-      guarantee_general_id = fields.Many2one('guarantee.device.genaral', string='Guarantee General', required=True)
+      general_id = fields.Many2one('guarantee.device.genaral', string='Guarantee General', required=True)
       
       guarantee_reason = fields.Text(string='Reason', required=False)
       guarantee_loacation = fields.Char(string='Guarantee location', required=True)

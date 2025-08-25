@@ -2,7 +2,7 @@ from odoo import models, fields, api
 import logging
 _logger = logging.getLogger(__name__)
 
-class GuaranteeDevice(models.Model):
+class GuaranteeDeviceGenaral(models.Model):
       _name = 'guarantee.device.genaral'
       
       product_id = fields.Many2one(
