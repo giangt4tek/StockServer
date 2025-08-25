@@ -32,5 +32,5 @@ class GuaranteeDeviceGenaral(models.Model):
       guarantee_count = fields.Char(string='Guarantee count', required=True)
       details_ids = fields.One2many(
                   'guarantee.genaral.detail',
-                  'guarantee_general_id',
+                  'general_id',
                   string="Guarantee Details")
