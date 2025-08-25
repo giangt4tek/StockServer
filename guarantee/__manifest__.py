@@ -24,7 +24,7 @@
     
     "data": [
         # 'security/access_user.xml',
-        # 'security/ir.model.access.csv',
+        'security/ir.model.access.csv',
         'views/guarantee_device.xml',
         # 'views/invoice_report.xml',
         # 'views/wallet_contact.xml',
