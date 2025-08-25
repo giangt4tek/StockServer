@@ -1,10 +1,10 @@
 {# Part of Odoo. See LICENSE file for full copyright and licensing details.
  # Tên module
-    'name': 'Server Stock',
+    'name': 'guarantee',
     'version': '18.0',
 
     # Loại module
-    'category': 'stock',
+    'category': 'guarantee',
 
 
     # Độ ưu tiên module trong list module
@@ -13,19 +13,19 @@
     #'sequence': 5,
 
     # Mô tả module
-    "summary": "Debt recording system and payment call",
-    'description': 'Kho quản lý linh kiện thiết bị máy server',
+    "summary": "Bảo hành thiết bị theo Stact ID",
+    'description': 'Bảo hành thiết bị theo Stact ID',
     'author': 'GinGa GX',
 
     "depends": [
-        "base"
+        "base", "product"
     ],
     
     
     "data": [
         # 'security/access_user.xml',
         # 'security/ir.model.access.csv',
-        # 'views/pos_category.xml',
+        'views/guarantee_device.xml',
         # 'views/invoice_report.xml',
         # 'views/wallet_contact.xml',
         # 'data/cron_invoice.xml',
