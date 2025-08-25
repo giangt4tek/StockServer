@@ -99,4 +99,13 @@
     <record id="action_guarantee_general" model="ir.actions.act_window">
         <field name="name">Guarantee General</field>
         <field name="res_model">guarantee.device.genaral</field>
-        <field
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <!-- Menu -->
+    <menuitem id="menu_guarantee_root" name="Guarantee"/>
+    <menuitem id="menu_guarantee_general"
+              name="Devices"
+              parent="menu_guarantee_root"
+              action="action_guarantee_general"/>
+</odoo>
