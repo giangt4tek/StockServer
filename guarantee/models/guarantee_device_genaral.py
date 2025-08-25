@@ -3,7 +3,7 @@ import logging
 _logger = logging.getLogger(__name__)
 
 class GuaranteeDevice(models.Model):
-      _name = 'guarantee.device'
+      _name = 'guarantee.device.genaral'
       
       product_id = fields.Many2one(
         'product.product', 
@@ -30,13 +30,7 @@ class GuaranteeDevice(models.Model):
       guarantee_end_date = fields.Date(string='Guarantee End Date', required=True)
       
       guarantee_count = fields.Char(string='Guarantee count', required=True)
-      guarantee_reason = fields.Text(string='Reason', required=False)
-      guarantee_loacation = fields.Char(string='Guarantee location', required=True)
-
-      receive_date = fields.Date(string='Receive date', required=False)
-      repair = fields.Text(string='repair', required=False)
-      repair_time = fields.Date(string='Repair time', required=False)
-      repair_done = fields.Boolean(string='Repair done', default=False)
-      handover_date = fields.Date(string='Handover date', required=False)
-
-      note = fields.Text(string='Note', required=False)
+      details_ids = fields.One2many(
+                  'guarantee.genaral.detail',
+                  'guarantee_general_id',
+                  string="Guarantee Details")
