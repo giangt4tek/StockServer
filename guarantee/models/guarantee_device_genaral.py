@@ -7,29 +7,29 @@ class GuaranteeDeviceGenaral(models.Model):
       
       product_id = fields.Many2one(
         'product.product', 
-        string='Product', 
+        string='Sản phẩm', 
         required=True, 
         domain=[('type', '=', 'product'), ('tracking', '=', 'serial')]  )
       serial_tracking = fields.Char(string='Serial Tracking', required=True)
 
-      user = fields.Many2one('res.users', string='User', required=True, default=lambda self: self.env.user)
+      user = fields.Many2one('res.users', string='Khách hàng', required=True, default=lambda self: self.env.user)
       phone = fields.Char(
-                 string='Chủ tài khoản',
+                 string='Phone',
                  related='user.phone',
                  store=True,
                  readonly=True)
       email = fields.Char(
-                 string='Chủ tài khoản',
+                 string='Email',
                  related='user.email',
                  store=True,
                  readonly=True)
      
       
-      guarantee_period = fields.Integer(string='Guarantee period (months)', required=True)
-      guarantee_start_date = fields.Date(string='Guarantee Start Date', required=True)
-      guarantee_end_date = fields.Date(string='Guarantee End Date', required=True)
+      guarantee_period = fields.Integer(string='Thời gian BH (Tháng)', required=True)
+      guarantee_start_date = fields.Date(string='Ngày bắt đầu BH', required=True)
+      guarantee_end_date = fields.Date(string='Ngày kết thúc BH', required=True)
       
-      guarantee_count = fields.Char(string='Guarantee count', required=True)
+      guarantee_count = fields.Char(string='Số lần BH', required=True)
       details_ids = fields.One2many(
                   'guarantee.device.detail',
                   'general_id',
