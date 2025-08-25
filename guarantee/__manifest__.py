@@ -38,8 +38,8 @@
     'assets': {
         'web.assets_backend':
         [
-            'server_stock/static/src/js/**/*',
-            'server_stock/static/src/xml/**/*',
+            'guarantee/static/src/js/**/*',
+            'guarantee/static/src/xml/**/*',
         ],
 #         
     },
