@@ -25,14 +25,14 @@ class GuaranteeDevice(models.Model):
                  readonly=True)
      
       
-      guarantee_period = fields.Int(string='Guarantee period (months)', required=True)
+      guarantee_period = fields.Integer(string='Guarantee period (months)', required=True)
       guarantee_start_date = fields.Date(string='Guarantee Start Date', required=True)
       guarantee_end_date = fields.Date(string='Guarantee End Date', required=True)
       
       guarantee_count = fields.Char(string='Guarantee count', required=True)
       guarantee_reason = fields.Text(string='Reason', required=False)
       guarantee_loacation = fields.Char(string='Guarantee location', required=True)
-      
+
       receive_date = fields.Date(string='Receive date', required=False)
       repair = fields.Text(string='repair', required=False)
       repair_time = fields.Date(string='Repair time', required=False)
