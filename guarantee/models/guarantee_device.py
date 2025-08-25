@@ -3,7 +3,7 @@ import logging
 _logger = logging.getLogger(__name__)
 
 class GuaranteeDevice(models.Model):
-      _inherit = 'guarantee.device'
+      _name = 'guarantee.device'
       
       product_id = fields.Many2one(
         'product.product', 
