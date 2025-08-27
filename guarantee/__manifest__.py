@@ -18,8 +18,7 @@
     'author': 'GinGa GX',
 
     "depends": [
-        "base", "product"
-    ],
+        "base", "product", "account", "sale" ],
     
     
     "data": [
